@@ -1,0 +1,29 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "c0d42e4751d8a0e8456ce9eac2cb0b5d"
+name = "Cash_On_Delivery_Fee"
+handle = "cash_on_delivery_fee"
+application_url = "https://sm-redhead-deny-acre.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "checkout-extension-big.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://sm-redhead-deny-acre.trycloudflare.com/auth/callback",
+  "https://sm-redhead-deny-acre.trycloudflare.com/auth/shopify/callback",
+  "https://sm-redhead-deny-acre.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-04"
+
+[pos]
+embedded = false

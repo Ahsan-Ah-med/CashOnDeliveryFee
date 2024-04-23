@@ -37,7 +37,7 @@ export function run(input) {
   //   }
   // })
 
-  const getPayMethod = input?.paymentMethods.find((method) => method.name.includes("Cash on Delivery"));
+  const getPayMethod = input?.paymentMethods.find((method) => method.name.includes("Versand per Nachnahme"));
   if (selectedShippingOption?.title?.toLocaleLowerCase().includes("express")) {
     return {
       operations: [

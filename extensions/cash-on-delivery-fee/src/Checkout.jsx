@@ -24,7 +24,9 @@ function Extension() {
   const { variantId } = useSettings();
   const isAvailable = cartLines.some(line => line.merchandise.id === variantId)
   const getFeeProduct = cartLines.find(get => get?.merchandise?.id === variantId)
-
+  console.log(deliveryGroups);
+  console.log(selectedPayment);
+  console.log(getFeeProduct?.id);
   async function removeFromCart() {
     const removeItem = await applyCartLinesChange({
       type: "removeCartLine",
@@ -49,7 +51,7 @@ function Extension() {
 
   useEffect(() => {
     selectedPayment.forEach((payment) => {
-      if (payment?.type?.toLocaleLowerCase().includes("delivery") && !selectedMethod) {
+      if (payment?.type?.toLocaleLowerCase().includes("delivery" || "manualpayment") && !selectedMethod) {
         addToCart();
       } else {
         removeFromCart();
@@ -61,7 +63,7 @@ function Extension() {
     deliveryGroups.every((group) => {
       const deliveryOptions = group?.deliveryOptions;
       const selectedOption = group?.selectedDeliveryOption?.handle;
-      setSelectedMethod(deliveryOptions.some((option) => option.handle === selectedOption && option.title.toLocaleLowerCase().includes("express shipping")))
+      setSelectedMethod(deliveryOptions.some((option) => option.handle === selectedOption && option.title.toLocaleLowerCase().includes("express")))
     })
   }, [deliveryGroups])
 
