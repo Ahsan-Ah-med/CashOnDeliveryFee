@@ -3,7 +3,7 @@
 client_id = "c0d42e4751d8a0e8456ce9eac2cb0b5d"
 name = "Cash_On_Delivery_Fee"
 handle = "cash_on_delivery_fee"
-application_url = "https://sm-redhead-deny-acre.trycloudflare.com"
+application_url = "https://found-evaluate-execute-attraction.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://sm-redhead-deny-acre.trycloudflare.com/auth/callback",
-  "https://sm-redhead-deny-acre.trycloudflare.com/auth/shopify/callback",
-  "https://sm-redhead-deny-acre.trycloudflare.com/api/auth/callback"
+  "https://found-evaluate-execute-attraction.trycloudflare.com/auth/callback",
+  "https://found-evaluate-execute-attraction.trycloudflare.com/auth/shopify/callback",
+  "https://found-evaluate-execute-attraction.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
